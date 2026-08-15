@@ -1,33 +1,15 @@
-import { redirect } from "next/navigation";
-import { createServerClient } from "@supabase/ssr";
-import { cookies } from "next/headers";
+"use client";
 
-export default async function Home() {
-  let session = null;
+import React, { useState } from "react";
+import { LandingHero } from "@/components/LandingHero";
+import { ClinexaApp } from "@/components/ClinexaApp";
 
-  try {
-    const url = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
-    const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+export default function Home() {
+  const [view, setView] = useState<"hero" | "dashboard">("hero");
 
-    if (url && key && !url.includes("placeholder")) {
-      const cookieStore = cookies();
-      const supabase = createServerClient(url, key, {
-        cookies: {
-          get(name: string) {
-            return cookieStore.get(name)?.value;
-          },
-        },
-      });
-      const { data } = await supabase.auth.getSession();
-      session = data?.session ?? null;
-    }
-  } catch (err) {
-    session = null;
+  if (view === "hero") {
+    return <LandingHero onLaunchDashboard={() => setView("dashboard")} />;
   }
 
-  if (session) {
-    redirect("/dashboard");
-  } else {
-    redirect("/login");
-  }
+  return <ClinexaApp onReturnToHero={() => setView("hero")} />;
 }
