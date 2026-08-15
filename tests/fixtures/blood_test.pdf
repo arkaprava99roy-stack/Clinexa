@@ -1,0 +1,46 @@
+%PDF-1.4
+1 0 obj
+<</Type /Catalog /Pages 2 0 R>>
+endobj
+2 0 obj
+<</Type /Pages /Kids [3 0 R] /Count 1>>
+endobj
+3 0 obj
+<</Type /Page /Parent 2 0 R /MediaBox [0 0 612 792]
+  /Resources <</Font <</F1 <</Type /Font /Subtype /Type1 /BaseFont /Helvetica>>>>>>
+  /Contents 4 0 R>>
+endobj
+4 0 obj
+<</Length 490>>
+stream
+BT
+/F1 12 Tf
+50 750 Td
+(LABORATORY REPORT) Tj
+0 -20 Td
+(Patient: John Doe   DOB: 1985-03-12) Tj
+0 -20 Td
+(Date: 2024-01-15) Tj
+0 -40 Td
+(COMPLETE BLOOD COUNT) Tj
+0 -20 Td
+(Hemoglobin       14.2  g/dL     Reference: 13.5-17.5) Tj
+0 -20 Td
+(WBC              11.5  x10^3/uL Reference: 4.5-11.0) Tj
+0 -20 Td
+(Platelets        225   x10^3/uL Reference: 150-400) Tj
+0 -20 Td
+(Glucose          105   mg/dL    Reference: 70-99) Tj
+0 -20 Td
+(TSH              2.1   mIU/L    Reference: 0.4-4.0) Tj
+ET
+endstream
+endobj
+xref
+0 5
+0000000000 65535 f 
+trailer
+<</Size 5 /Root 1 0 R>>
+startxref
+9
+%%EOF
